@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="PocketTools — fast privacy-first utilities that run entirely in your browser.">
+  <title>PocketTools — useful tools, zero signup</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="hero">
+    <div>
+      <span class="pill">100% local • no signup</span>
+      <h1>PocketTools</h1>
+      <p>Small tools you need every day, in one fast privacy-first page.</p>
+    </div>
+  </header>
+
+  <main class="grid">
+    <section class="card">
+      <h2>Text Lab</h2>
+      <textarea id="textInput" placeholder="Paste text here..."></textarea>
+      <div class="actions">
+        <button data-text="trim">Clean spaces</button><button data-text="upper">UPPERCASE</button><button data-text="lower">lowercase</button><button data-text="title">Title Case</button>
+      </div>
+      <p id="textStats" class="muted">0 chars • 0 words • 0 lines</p>
+    </section>
+
+    <section class="card">
+      <h2>JSON</h2>
+      <textarea id="jsonInput" placeholder='{"hello":"world"}'></textarea>
+      <div class="actions"><button id="jsonFormat">Format</button><button id="jsonMinify">Minify</button></div>
+      <p id="jsonStatus" class="muted">Ready</p>
+    </section>
+
+    <section class="card">
+      <h2>Password Generator</h2>
+      <div class="row"><input id="passwordLength" type="number" min="8" max="128" value="20"><button id="passwordGenerate">Generate</button></div>
+      <input id="passwordOutput" readonly>
+      <button class="copy" data-copy="passwordOutput">Copy</button>
+    </section>
+
+    <section class="card">
+      <h2>UUID</h2>
+      <input id="uuidOutput" readonly>
+      <div class="actions"><button id="uuidGenerate">Generate UUID</button><button class="copy" data-copy="uuidOutput">Copy</button></div>
+    </section>
+
+    <section class="card">
+      <h2>Unix Timestamp</h2>
+      <div class="row"><input id="timestampInput" placeholder="e.g. 1760000000"><button id="timestampConvert">Convert</button></div>
+      <input id="timestampOutput" readonly placeholder="Readable date">
+      <button id="timestampNow">Use current time</button>
+    </section>
+
+    <section class="card">
+      <h2>Base64</h2>
+      <textarea id="base64Input" placeholder="Text or Base64..."></textarea>
+      <div class="actions"><button id="base64Encode">Encode</button><button id="base64Decode">Decode</button></div>
+    </section>
+
+    <section class="card">
+      <h2>URL Encode / Decode</h2>
+      <textarea id="urlInput" placeholder="Paste text or URL..."></textarea>
+      <div class="actions"><button id="urlEncode">Encode</button><button id="urlDecode">Decode</button></div>
+    </section>
+
+    <section class="card accent">
+      <h2>Privacy by default</h2>
+      <p>Your pasted data stays on your device. No account, no tracking code, no server round-trip required for these tools.</p>
+      <a href="https://github.com/XaoLao/PocketTools" target="_blank" rel="noreferrer">View on GitHub →</a>
+    </section>
+  </main>
+
+  <footer>Built to be fast, boringly useful, and easy to contribute to.</footer>
+  <script src="app.js"></script>
+</body>
+</html>
